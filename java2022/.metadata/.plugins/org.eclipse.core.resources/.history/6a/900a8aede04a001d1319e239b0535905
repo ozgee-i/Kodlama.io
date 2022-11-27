@@ -1,0 +1,11 @@
+package javademos;
+
+public class Product {
+	//attibbute | field
+	int id;
+	String name;
+	String description;
+	double price;
+	int stockAmount;
+
+}

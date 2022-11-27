@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="oop1.IndividualCustomer"/>
+    <fullyQualifiedTypeName name="oop1.CorporateCustomer"/>
+    <fullyQualifiedTypeName name="javax.swing.border.EmptyBorder"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="javademos.CustomerManager"/>
+    <fullyQualifiedTypeName name="javademos.DortIslem"/>
+    <fullyQualifiedTypeName name="javademos.Product"/>
+    <fullyQualifiedTypeName name="javademos.ProductManager"/>
+    <fullyQualifiedTypeName name="methodOverloading.DortIslem"/>
+    <fullyQualifiedTypeName name="inheritance.Person"/>
+    <fullyQualifiedTypeName name="inheritance.PersonManager"/>
+    <fullyQualifiedTypeName name="inheritance.EmployeeManager"/>
+    <fullyQualifiedTypeName name="inheritance.CustomerManager"/>
+    <fullyQualifiedTypeName name="inheritanceDemo.KrediUI"/>
+    <fullyQualifiedTypeName name="inheritanceDemo.OgretmenKrediManager"/>
+    <fullyQualifiedTypeName name="inheritanceDemo.BaseKrediManager"/>
+    <fullyQualifiedTypeName name="inheritanceDemo.AskerKrediManager"/>
+</qualifiedTypeNameHistroy>

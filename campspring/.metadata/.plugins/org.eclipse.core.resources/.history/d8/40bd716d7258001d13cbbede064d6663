@@ -1,0 +1,40 @@
+package kodlama.io.Kodlama.io.Devs.dataAccess.concretes;
+
+import java.util.List;
+
+import kodlama.io.Kodlama.io.Devs.dataAccess.abstracts.LanguageRepository;
+import kodlama.io.Kodlama.io.Devs.entities.concretes.Language;
+
+public class InMemoryLanguageRepository implements LanguageRepository {
+
+	@Override
+	public List<Language> getAllLanguage() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Language getIdLanguage(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void addLanguage(Language language) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void deleteLanguage(int id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void updateLanguage(Language language) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

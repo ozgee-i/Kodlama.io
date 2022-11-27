@@ -1,0 +1,26 @@
+package javademos;
+
+import java.util.Iterator;
+
+public class loopDemo {
+
+	public static void main(String[] args) {
+		//i=i+1 ile i++ aynıdır
+		for(int i=1;i<=10;i++)	{
+			System.out.println(i);
+			
+		}	System.out.println("döngü bitti");
+		
+		for(int i=1;i<=10;i+=2)	{
+			System.out.println(i);
+			
+		}	System.out.println("döngü bitti");
+		
+		for(int i=2;i<=10;i+=2)	{
+			System.out.println(i);
+			
+		}	System.out.println("döngü bitti");
+
+	}
+
+}

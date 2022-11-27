@@ -1,0 +1,75 @@
+package kodlama.io.Kodlama.io.Devs.dataAccess.concretes;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+import kodlama.io.Kodlama.io.Devs.dataAccess.abstracts.LanguageRepository;
+import kodlama.io.Kodlama.io.Devs.entities.concretes.Language;
+
+@Repository
+public class InMemoryLanguageRepository implements LanguageRepository {
+
+	List<Language> languages;
+	
+	@Autowired
+	public InMemoryLanguageRepository(){
+		languages = new ArrayList<Language>();
+        languages.add(new Language(1,"JAVA"));
+        languages.add(new Language(2,"C#"));
+        languages.add(new Language(3,"Python"));
+    }
+	
+	@Override
+	public List<Language> getAll() {
+		return languages;
+	}
+
+	@Override
+	public Language getIdLanguage(int id) {
+		for(Language language : languages) {
+            if(language.getId()==id){
+                return language;
+            }
+        }
+		return null;
+	}
+
+	@Override
+	public void add(Language language) {
+		boolean control = false;
+        for(Language lang : languages) {
+            if(language.getName().equals(lang.getName()) || lang.getId() == lang.getId()) {
+                control = true;
+            }
+            else if(!language.getName().equals("")){
+                languages.add(language);
+            }
+        }
+		
+	}
+
+	@Override
+	public void delete(int id) {
+		for(Language programiglang : languages) {
+            if(programiglang.getId() == id){
+                languages.remove(programiglang);
+            }
+		}
+		
+	}
+
+	@Override
+	public void update(int id, String name) {
+		int a = 0;
+		for (Language programmingLanguages : languages) {
+			a = a + 1;
+			if(programmingLanguages.getId() == id) {
+				languages.set(a - 1, new Language(id, name));
+			}
+		}
+	}
+
+}

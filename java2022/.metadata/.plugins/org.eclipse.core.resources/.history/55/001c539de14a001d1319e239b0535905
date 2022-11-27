@@ -1,0 +1,18 @@
+package javademos.classesWithAttributes;
+
+public class classesWithAttributes {
+
+	public static void main(String[] args) {
+		Product product =new Product();
+		product.name="Laptop";
+		product.id=1;
+		product.description="asus";
+		product.price=8000;
+		product.stockAmount=100;
+		
+		ProductManager productManager =new ProductManager();
+		productManager.Add(product);
+
+	}
+
+}

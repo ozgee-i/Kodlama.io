@@ -1,0 +1,14 @@
+package javademos;
+
+public class variables {
+//reasubility tekrar tekara kullan
+	public static void main(String[] args) {
+		
+		int ogrenciSayisi=12;
+		System.out.println("Öğrenci sayım: "+ogrenciSayisi);
+		System.out.println("Öğrenci sayım: "+ogrenciSayisi);
+		System.out.println("Öğrenci sayım: 9");
+
+	}
+
+}

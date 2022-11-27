@@ -1,0 +1,56 @@
+package kodlama.io.Kodlama.io.Devs.business.concretes;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import kodlama.io.Kodlama.io.Devs.business.abstracts.LanguageService;
+import kodlama.io.Kodlama.io.Devs.dataAccess.abstracts.LanguageRepository;
+import kodlama.io.Kodlama.io.Devs.entities.concretes.Language;
+
+@Service
+public class LanguageManager implements LanguageService {
+
+	private LanguageRepository languageRepository;
+
+    @Autowired
+    public LanguageManager(LanguageRepository languageRepository) {
+
+        this.languageRepository = languageRepository;
+    }
+    
+	@Override
+	public List<Language> getAll() {
+		return languageRepository.getAllLanguage();
+	}
+
+	@Override
+	public Language getIdLanguage(int id) {
+		 return languageRepository.getIdLanguage(id);
+	}
+
+	@Override
+	public void addLanguage(Language language) throws Exception {
+		for (Language lang:this.languageRepository.getAllLanguage()) {
+            if(lang.getName() == language.getName()){
+                throw new Exception("Bu dil kayıtlı");
+            }
+        }
+        if(language.getName() == null){
+            throw new Exception("Dil ismi Boş geçilemez");
+        }
+        languageRepository.addLanguage(language);	
+	}
+
+	public void deleteLanguage(int id) {
+		 languageRepository.deleteLanguage(id);
+	}
+
+	@Override
+	public void updateLanguage(Language language) {
+		 languageRepository.updateLanguage(language);
+	}
+	
+
+}
